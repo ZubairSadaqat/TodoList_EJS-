@@ -1,0 +1,31 @@
+*** Templating using EJS 
+	EJS Setup and simple structure
+	- Firs you sould have install EJS using (npm i EJS ) after that you have to making a new directory with name of (views) and put a file (index.ejs) in it and set up you template file using Html 
+	- In ejs template file you can define you template and variable with (<%= %>) this is markeup vaiable which value is come from JS File 
+	- Now you can simple pass the value (  res.render('list', {__markupvariable: __passingVar}); )
+-----------------------------------------------------------------------------------------
+*** Running JS code in template File
+	- using scropted escape tag( <% %> ) you can make control follow in you template 
+	- control fllow is like if else for loop etc
+-----------------------------------------------------------------------------------------
+*** CSS File attached	
+	- if you want to aplly css in ejs file you shold be deine explicitly 
+	- make (public) folder and put your css and imgs init. On server side
+	- Now you can apply your css 
+-----------------------------------------------------------------------------------------
+*** multiple templating vs multiple layout
+	- we can use same template of EJS file with different titles with  same structre and style
+	- But we can also make differenet layout with same style 
+	- to make diff layout we can make new hedaer.ejs footer.ejs in diff files 	
+	- like footer.ejs and we can use it any ejs file like this -> <%- include("footer.ejs) -%>
+-----------------------------------------------------------------------------------------
+*** Node Module Exports & Passing functions and data btw files 	
+	- We can make different js file and make functions init and return the value 
+	- By using (module.exports = __funName) we can export functions & data & strings & objects as well
+	- In our (app.js) we can import like this ( const data = require(__dirname + "fileName.js"));
+	- and now by data.__funName we can call our functions
+-----------------------------------------------------------------------------------------
+*** const Array & and variables 
+	- we can push value in const array but we cant declare again with same name again
+	- same for const object we cant intialze again but we can change the value of key in it
+
