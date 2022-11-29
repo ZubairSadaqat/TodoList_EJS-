@@ -5,10 +5,15 @@
     <title>Todolist</title>
 </head>
 <body>
-    <% if(KindofDay === "Monday"){ %>
-    <h1 style=" color:  Orange;"> Its a <%= KindofDay %></h1>
-    <% }else{ %>
-    <h1 style=" color: aquamarine;"> Its a <%= KindofDay %></h1>
-    <%}%>
+
+<h1>   <%= KindofDay %> </h1>
+<% for (var i= 0 ; i< NewItemlists.length ; i++) {%>
+<li> <%= NewItemlists[i]%> </li>
+<%}%>
+<form action="/" method="post" >
+    <input type="text" name="newItem">
+    <button type="submit" name="button">Add</button>
+</form>
+
 </body>
 </html>
