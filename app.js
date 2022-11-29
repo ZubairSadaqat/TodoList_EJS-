@@ -5,6 +5,8 @@ var items = ["Food", "Drink" ,'eat'];
 const app = express();
 app.use(bodyParser.urlencoded({extended: true}))
 app.set('view engine', 'ejs');
+app.use(express.static("public"))
+
 app.get("/", (req,res)=>{
     const today = new Date();
     // const day = days[today.getDay()];
