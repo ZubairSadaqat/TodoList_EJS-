@@ -1,13 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Todolist</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
 
-<h1 class="box" id="heading">   <%= KindofDay %> </h1>
+<%- include("header")-%>
+<h1 class="box" id="heading">   <%= listTitle %> </h1>
 
 <div class="box">
     <% for (var i= 0 ; i< NewItemlists.length ; i++) {%>
@@ -18,11 +11,8 @@
     <%}%>
         <form class="item" action="/" method="post" >
             <input type="text" name="newItem" placeholder="NewItem" autocomplete="off">
-            <button type="submit" name="button">+</button>
+            <button type="submit" name="list" value="<%=listTitle%>">+</button>
         </form>
 </div>
 
-
-
-</body>
-</html>
+<%- include("footer")-%>
